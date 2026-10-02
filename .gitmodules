@@ -1,0 +1,6 @@
+[submodule "external/ultimate-asi-loader"]
+	path = external/ultimate-asi-loader
+	url = https://github.com/ThirteenAG/Ultimate-ASI-Loader.git
+[submodule "external/minhook"]
+	path = external/minhook
+	url = https://github.com/TsudaKageyu/minhook.git

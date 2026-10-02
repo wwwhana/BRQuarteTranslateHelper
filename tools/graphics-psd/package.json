@@ -1,0 +1,9 @@
+{
+  "name": "brq-graphics-psd-export",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@napi-rs/canvas": "1.0.8",
+    "ag-psd": "31.0.2"
+  }
+}

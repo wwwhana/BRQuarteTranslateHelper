@@ -1,0 +1,36 @@
+include_guard(GLOBAL)
+
+cmake_policy(PUSH)
+if(POLICY CMP0077)
+    cmake_policy(SET CMP0077 NEW)
+endif()
+if(POLICY CMP0126)
+    cmake_policy(SET CMP0126 NEW)
+endif()
+set(BRQ_FONT_TTF "" CACHE FILEPATH "Existing local replacement font TTF (empty keeps runtime fonts)")
+cmake_policy(POP)
+
+function(_brq_absolute_file input label output)
+    if(NOT input)
+        set(${output} "" PARENT_SCOPE)
+        return()
+    endif()
+
+    get_filename_component(_absolute "${input}" ABSOLUTE BASE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
+    if(NOT EXISTS "${_absolute}" OR IS_DIRECTORY "${_absolute}")
+        message(FATAL_ERROR "${label} does not exist or is a directory: ${input}")
+    endif()
+    set(${output} "${_absolute}" PARENT_SCOPE)
+endfunction()
+
+function(brq_resolve_font)
+    set(_font "")
+
+    if(NOT BRQ_FONT_TTF AND EXISTS "${BRQ_TRANSLATIONS_ROOT}/font/font.ttf")
+        _brq_absolute_file("${BRQ_TRANSLATIONS_ROOT}/font/font.ttf" "Workspace font" _font)
+    else()
+        _brq_absolute_file("${BRQ_FONT_TTF}" "BRQ_FONT_TTF" _font)
+    endif()
+
+    set(BRQ_RESOLVED_FONT_TTF "${_font}" PARENT_SCOPE)
+endfunction()

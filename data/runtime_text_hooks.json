@@ -1,0 +1,50 @@
+{
+  "sources": [
+    "日菜子が編成されていません",
+    "詩帆が編成されていません",
+    "工作レシピ%d解放",
+    "学校開発レシピ%d解放"
+  ],
+  "modules": {
+    "B0": [
+      {
+        "rva": 6942224,
+        "signature": "488bc4534881ec90000000660f6f054d"
+      },
+      {
+        "rva": 6167392,
+        "signature": "488b89b0010000e994b3f9ffcccccccc"
+      }
+    ],
+    "B2": [
+      {
+        "rva": 6898528,
+        "signature": "488bc4534881ec90000000660f6f054d"
+      },
+      {
+        "rva": 6111600,
+        "signature": "488b89b0010000e914b0f9ffcccccccc"
+      }
+    ],
+    "B3": [
+      {
+        "rva": 6909376,
+        "signature": "488bc4534881ec90000000660f6f05ed"
+      },
+      {
+        "rva": 6122144,
+        "signature": "488b89b0010000e9a4b1f9ffcccccccc"
+      }
+    ],
+    "B4": [
+      {
+        "rva": 6934992,
+        "signature": "488bc4534881ec90000000660f6f05cd"
+      },
+      {
+        "rva": 6144784,
+        "signature": "488b89b0010000e904b6f9ffcccccccc"
+      }
+    ]
+  }
+}
